@@ -120,8 +120,6 @@ Il fonctionne en tant que VPN de type "mesh" (*maille*) : chaque machine connect
 
 Les machines connectées via Tailscale peuvent être situées à des endroits différents. Cela permet un accès distant sécurisé aux ressources de votre réseau, comme si les machines étaient physiquement connectées au même réseau local.
 
-![Réseau.png](Documentation%20Archi%20Linux%203ecd398226ca456189a1e708f48b1558/Reseau.png)
-
 - La machine virtuelle de Julien héberge la base de données sous MariaDB, choisie pour ses avantages pratiques et fonctionnelles. Cette machine stocke et gère toutes les données du site.
 - La machine virtuelle de Fabien est responsable de l’API, cette dernière construire en langage Python. Elle sert d'intermédiaire pour récupérer les données de la base de données de la machine de Julien et les transmettre selon les requêtes reçues.
 - La machine virtuelle d’Hélène affiche les données utilisateurs en récupérant les informations via l'API de la machine de Fabien. Cette machine gère l'interface utilisateur et la présentation des données.
@@ -199,8 +197,6 @@ Toutes ces machines virtuelles sont correctement configurées et connectées au 
     ```
     
 - aller dans le dossier `var/www/html` et vérifier avec `ls` que le fichier a bien été copié
-    
-    ![Capture d’écran 2024-01-26 à 14.19.14.png](Documentation%20Archi%20Linux%203ecd398226ca456189a1e708f48b1558/Capture_decran_2024-01-26_a_14.19.14.png)
     
 - Adresse dans le navigateur pour la vue : [http://100.114.70.103/AddSeries.php](http://100.114.70.103/AddSeries.php)
 
